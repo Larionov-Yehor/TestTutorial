@@ -25,9 +25,10 @@ public class StringCalculator {
                 if(Integer.parseInt(number)<0){
                     throw new RuntimeException("no negatives are allowed");
                 }
-                returnValue += Integer.parseInt(number.trim());
+               if(Integer.parseInt(number)>1000){
+               continue;}
             }
-
+            returnValue += Integer.parseInt(number.trim());
 
         }
         return returnValue;

@@ -63,4 +63,11 @@ public class StringCalculatorTest {
         }
         assertThat(correctMessage,equalTo(exceptionMessage));
     }
+
+    @Test
+    public final void whenOneOrMoreNumbersAreGreaterThan1000IsUsedThenItIsNotIncludedInSum() {
+        assertThat(1+2, equalTo(StringCalculator.add("1,2,1001")));
+    }
+
+    
 }
