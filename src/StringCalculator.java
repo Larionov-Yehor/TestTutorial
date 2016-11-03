@@ -10,7 +10,7 @@ public class StringCalculator {
 
         List<Integer> numbersArray = new ArrayList<>();
 
-        for (String number: numbers.split(",")){
+        for (String number: numbers.split(",|n")){
             if(number.isEmpty()){
                 result=0;
                 break;

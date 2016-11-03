@@ -38,4 +38,9 @@ public class StringCalculatorTest {
         assertThat(9+1, equalTo(StringCalculator.add("9,1")));
     }
 
+    @Test
+    public void whenNewLineWasInputedBetweenNumbersCalcMustReturnTheirSum(){
+        assertThat(1+2+3, equalTo(StringCalculator.add("1,2n3")));
+    }
+
 }
