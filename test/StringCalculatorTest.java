@@ -42,5 +42,9 @@ public class StringCalculatorTest {
     public void whenNewLineWasInputedBetweenNumbersCalcMustReturnTheirSum(){
         assertThat(1+2+3, equalTo(StringCalculator.add("1,2n3")));
     }
+    @Test
+    public void whenDelimiterIsInStringIsUsedForSeparationCalcMustReturnSum(){
+        assertThat(1+3+4, equalTo(StringCalculator.add("//;n1;3;4")));
+    }
 
 }
