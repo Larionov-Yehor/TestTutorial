@@ -22,8 +22,13 @@ public class StringCalculator {
         String[] numbersArray = numbers.split(delimiter);
         for (String number : numbersArray) {
             if (!number.trim().isEmpty()) {
+                if(Integer.parseInt(number)<0){
+                    throw new RuntimeException("no negatives are allowed");
+                }
                 returnValue += Integer.parseInt(number.trim());
             }
+
+
         }
         return returnValue;
     }

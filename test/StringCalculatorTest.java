@@ -47,4 +47,20 @@ public class StringCalculatorTest {
         assertThat(1+3+4, equalTo(StringCalculator.add("//;n1;3;4")));
     }
 
+    @Test (expected = RuntimeException.class)
+    public void whenNegativeNumbersAreInputedMustThrowRuntimeException(){
+        StringCalculator.add("3,4,5,-7,1");
+    }
+
+    @Test
+    public void exceptionCausedByNegativeNumbersMustBeCorrect(){
+        String correctMessage = "no negatives are allowed";
+        String exceptionMessage =null;
+        try{
+            StringCalculator.add("1,2,-3");
+        }catch (RuntimeException r){
+           exceptionMessage =r.getMessage();
+        }
+        assertThat(correctMessage,equalTo(exceptionMessage));
+    }
 }
