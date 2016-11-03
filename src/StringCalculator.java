@@ -20,9 +20,21 @@ public class StringCalculator {
 
             }
 
+
+
         if (numbersArray.size()>2){
             throw new RuntimeException("no more than 2 numbers are allowed");
             }
+
+       // if (numbersArray.size()==1){
+          //  result=numbersArray.get(0);
+
+       // }
+
+        for (int number: numbersArray) {
+            result+=number;
+
+        }
 
         return result;}
     }

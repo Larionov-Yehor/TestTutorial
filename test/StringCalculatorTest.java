@@ -27,4 +27,15 @@ public class StringCalculatorTest {
     public void ifStringIsEmplyCalculatorReturnsZero(){
         assertThat(0,equalTo(StringCalculator.add("")));
     }
+
+    @Test
+    public void whenOneNumberWasInputedReturnItself(){
+        assertThat(9, equalTo(StringCalculator.add("9")));
+    }
+
+    @Test
+    public void whenTwoNumbersWereInputedReturnSumOfThem(){
+        assertThat(9+1, equalTo(StringCalculator.add("9,1")));
+    }
+
 }
