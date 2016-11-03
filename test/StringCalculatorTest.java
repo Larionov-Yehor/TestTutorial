@@ -3,6 +3,7 @@
  */
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
+import static org.hamcrest.core.IsEqual.equalTo;
 import org.junit.Test;
 
 
@@ -21,5 +22,9 @@ public class StringCalculatorTest {
     @Test (expected = RuntimeException.class)
     public void ifInputIsNotANumber( ){
         StringCalculator.add("a,2");
+    }
+    @Test
+    public void ifStringIsEmplyCalculatorReturnsZero(){
+        assertThat(0,equalTo(StringCalculator.add("")));
     }
 }
