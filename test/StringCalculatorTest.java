@@ -9,9 +9,9 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 
-    @Test (expected = RuntimeException.class)
-    public void whenMoreThan2NumbersAreUsedThenExceptionIsThrown(){
-        StringCalculator.add("1,2,3");
+    @Test
+    public void whenAnyNumbersIsUsedCalculatorMustReturnTheirSum(){
+     assertThat(1+2+3+4+5, equalTo(StringCalculator.add("1,2,3,4,5")));
     }
 
     @Test
